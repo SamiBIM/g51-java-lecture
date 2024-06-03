@@ -1,6 +1,5 @@
 //*package se.lexicon;
 
-import org.w3c.dom.ls.LSOutput;
 
 //public class Car {
 
