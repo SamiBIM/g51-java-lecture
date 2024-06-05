@@ -10,7 +10,7 @@ public class Score {
 
         }
 
-        Else if (score >=55 && score <= 64) {
+        //Else if (score >=55 && score <= 64) {
             System.out.println("You are almost there!");
         }
 
