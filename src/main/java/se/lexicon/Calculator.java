@@ -8,9 +8,9 @@ public class Calculator {
         displayMenu();
         Scanner scanner = new Scanner(System.in);
         int operationType = scanner.nextInt();
-       double result = performOperation(operationType);
+        double result = performOperation(operationType);
         System.out.println("Result:" + result);
-               double number1, number2;
+        double number1, number2;
 
     }
 
@@ -23,6 +23,7 @@ public class Calculator {
         System.out.println("4. Divide");
         System.out.println("5. Exit");
         System.out.println("Select an operation:");
+        //System.out.println("Invalid operation selection");
 
     }
 
@@ -34,34 +35,40 @@ public class Calculator {
 
     }
 
-    public static double performOperation (int operationType) {
-        double result= 0;
-        double number1 = getNumber();
-        double number2 = getNumber();
-
+    public static double performOperation(int operationType) {
+        double result = 999;
+        if (operationType >= 1 && operationType <= 4) {
+            double number1 = getNumber();
+            double number2 = getNumber();
 
             switch (operationType) {
-            case 1:
-                result = number1 + number2;
-                break;
-            //add
-            case 2:
-                result = number1 - number2;
+                case 1:
+                    result = number1 + number2;
+                    break;
+                //add
+                case 2:
+                    result = number1 - number2;
 
-            //sub
-            break;
-            case 3:
-                result = number1 * number2;
+                    //sub
+                    break;
+                case 3:
+                    result = number1 * number2;
 
-            //multi
-            break;
-            case 4:
-                result = number1 / number2;
-                break;
-            //divide
-            default:
-                System.out.println("Invalid input, Please enter a correct input");
+                    //multi
+                    break;
+                case 4:
+                    result = number1 / number2;
+                    break;
+                //divide
+                default:
+                    System.out.println("Invalid input, Please enter a correct input");
+            }
         }
-        return result;
+
+                else { System.out.println("Invalid operation entry");
+            }
+
+            return result;
     }
-}
+    }
+
