@@ -6,9 +6,11 @@ import java.util.Scanner;
 public class Currencyconverter {
 
     public static void main(String[] args) {
-        double sek = 1000;
+        Scanner scanner = new Scanner(System.in);
+        double conversion = scanner.nextInt();
         double exchangeRate = 0.095279858;
-        System.out.println("The kronor amount:" + sek + " = " +sek * exchangeRate+" USD ");
+        double result = conversion * exchangeRate;
+        System.out.println("The kronor amount:" + conversion + " = " +result+" USD ");
     }
 }
        /* displayMenu();
